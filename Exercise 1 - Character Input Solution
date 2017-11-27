@@ -1,0 +1,16 @@
+#Exercise 1:
+
+Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them 
+the year that they will turn 100 years old.
+
+#Solution:
+
+import time
+Time = time.localtime(time.time())
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+if age < 100:
+  year_100 = ((100-age) + Time.tm_year)
+  print(name.title() + " your year is " + str(year_100) + " when you will 100 years old.")
+else:
+  print("Your age already more than 100.")
