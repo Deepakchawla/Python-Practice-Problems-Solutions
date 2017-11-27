@@ -1,0 +1,45 @@
+#Exercise 3
+Take a list, say for example this one:
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements of the list that are less than 5.
+
+Extras:
+
+1. Instead of printing the elements one by one, make a new list that has all the elements less than 5 from this list in it 
+and print out this new list.
+
+2. Write this in one line of Python.
+
+3. Ask the user for a number and return a list that contains only elements from the original list a that are smaller than 
+that number given by the user.
+
+#Solution
+
+list = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for value in a:
+  if value < 5:
+    print (value)
+
+#Solution
+
+Extras - 1    
+
+list_old = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+list_new = []
+for value in list_old:
+  if value < 5:
+    list_new.append(value)
+print(list_new)
+
+Extras - 2
+
+Extras - 3
+
+list_old = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+num = int(input("Enter a number for check:"))
+list_new = []
+for value in list_old:
+  if value < num:
+    list_new.append(value)
+print(list_new)
