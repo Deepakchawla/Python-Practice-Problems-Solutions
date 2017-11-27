@@ -1,0 +1,36 @@
+#Exercise 8
+Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a 
+message of congratulations to the winner, and ask if the players want to start a new game)
+
+Remember the rules:
+
+Rock beats scissors
+Scissors beats paper
+Paper beats rock
+
+#Solution
+
+new_game = "Yes"
+game_control = "Enter"
+player1 = input("Please enter player1 name:")
+player2 = input("Please enter player2 name:")
+while new_game == "Yes":
+  choice1 = input(player1.title() + ", What you want to choice Rock or Paper, Sessior:").title()
+  choice2 = input(player2.title() + ", What you want to choice Rock or Paper, Sessior:").title()
+  if choice1 == choice2:
+    print("Game has been tie")
+  elif choice1 == "Rock" and choice2 == "Paper":
+    print(player2, "you win")
+  elif choice1 == "Rock" and choice2 == "Sessior":
+    print(player1, "you win")
+  elif choice1 == "Paper" and choice2 == "Rock":
+    print(player1, "you win")
+  elif choice1 == "Paper" and choice2 == "Sessior":
+    print(player2, "you win")
+  elif choice1 == "Sessior" and choice2 == "Rock":
+    print(player2, "you win")
+  elif choice1 == "Sessior" and choice2 == "Paper":
+    print(player1, "you win")
+  else:
+    print("You enter worng input choice")
+  new_game = input("Wants to start new game, Yes or No..??").title()
